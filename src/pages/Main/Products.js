@@ -1,202 +1,77 @@
-import React from 'react';
+import React, {useState} from 'react';
+import {View, Text} from 'react-native';
 import {
-  StyleSheet,
-  View,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  StatusBar,
-  ImageBackground,
-  Image,
-  Dimensions,
-  Button,
-} from 'react-native';
+  Container,
+  Header,
+  Content,
+  Footer,
+  Title,
+  Badge,
+  Form,
+  Picker,
+  Item,
+} from 'native-base';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import Cart from '../../assets/svgs/cart';
+import LocationDetect from '../../components/Products/LocationDetect';
+import ProductList from '../../components/Products/ProductList';
 
 const Product = props => {
+  const [vendor, setVendor] = useState('ALL');
   return (
-    <View>
-      <View style={styles.inputView}>
-        <TextInput style={styles.location} placeholder="Location" />
-      </View>
-      <View style={styles.inputView}>
-        <TextInput style={styles.vendorList} placeholder="Vendor List" />
-      </View>
-      <View>
-        <Text
+    <Container>
+      <Header style={{backgroundColor: 'white', display: 'flex'}}>
+        <LocationDetect />
+        <View
           style={{
-            fontSize: 16,
-            marginLeft: 20,
-            marginRight: 20,
-            marginTop: 20,
-            marginBottom: 10,
+            alignItems: 'center',
+            display: 'flex',
+            justifyContent: 'center',
+            position: 'relative',
           }}>
-          Products are below:
-        </Text>
-      </View>
-      <View
-        style={{
-          padding: 10,
-          borderWidth: 1,
-          borderRadius: 10,
-          marginLeft: 15,
-          marginRight: 15,
-        }}>
-        <View style={{display: 'flex', flexDirection: 'row'}}>
-          <Text
+          <Badge
+            primary
             style={{
-              fontSize: 18,
-              flex: 1,
-              marginTop: 10,
+              position: 'absolute',
+              top: 5,
+              right: -5,
+              width: 20,
+              height: 20,
             }}>
-            Daily Special: Bisleri
-          </Text>
-          {/* <Image
-            style={{width: 50, height: 50}}
-            source={{
-              uri: 'https://facebook.github.io/react-native/img/tiny_logo.png',
-            }}
-          /> */}
-          <Button title="Add" />
+            <Text style={{fontSize: 12, color: 'white'}}>2</Text>
+          </Badge>
+          <Icon name="cart-outline" color={'#384850'} size={30} />
         </View>
-      </View>
-      <View
-        style={{
-          padding: 10,
-          borderWidth: 1,
-          borderRadius: 10,
-          marginLeft: 15,
-          marginRight: 15,
-          marginTop: 15,
-        }}>
-        <View style={{display: 'flex', flexDirection: 'row'}}>
-          <Text
-            style={{
-              fontSize: 18,
-              flex: 1,
-              marginTop: 10,
-            }}>
-            Daily Special: Bisleri
-          </Text>
-          {/* <Image
-            style={{width: 50, height: 50}}
-            source={{
-              uri: 'https://facebook.github.io/react-native/img/tiny_logo.png',
-            }}
-          /> */}
-          <Button title="Add" />
-        </View>
-      </View>
-      <View
-        style={{
-          padding: 10,
-          borderWidth: 1,
-          borderRadius: 10,
-          marginLeft: 15,
-          marginRight: 15,
-          marginTop: 15,
-        }}>
-        <View style={{display: 'flex', flexDirection: 'row'}}>
-          <Text
-            style={{
-              fontSize: 18,
-              flex: 1,
-              marginTop: 10,
-            }}>
-            Daily Special: Bisleri
-          </Text>
-          {/* <Image
-            style={{width: 50, height: 50}}
-            source={{
-              uri: 'https://facebook.github.io/react-native/img/tiny_logo.png',
-            }}
-          /> */}
-          <Button title="Add" />
-        </View>
-      </View>
-      <View
-        style={{
-          padding: 10,
-          borderWidth: 1,
-          borderRadius: 10,
-          marginLeft: 15,
-          marginRight: 15,
-          marginTop: 15,
-        }}>
-        <View style={{display: 'flex', flexDirection: 'row'}}>
-          <Text
-            style={{
-              fontSize: 18,
-              flex: 1,
-              marginTop: 10,
-            }}>
-            Daily Special: Bisleri
-          </Text>
-          {/* <Image
-            style={{width: 50, height: 50}}
-            source={{
-              uri: 'https://facebook.github.io/react-native/img/tiny_logo.png',
-            }}
-          /> */}
-          <Button title="Add" />
-        </View>
-      </View>
-      <View style={styles.checkout}>
-        <TouchableOpacity
-          onPress={() => {
-            props.navigation.navigate('Cart');
-          }}>
-          <Text style={styles.loginText}>Checkout</Text>
-        </TouchableOpacity>
-      </View>
-    </View>
+      </Header>
+
+      <Content>
+        <Form>
+          <Item picker>
+            <Picker
+              mode="dropdown"
+              iosIcon={<Icon name="arrow-down" />}
+              style={{width: '100%'}}
+              placeholder="Select Vendor"
+              placeholderStyle={{color: '#bfc6ea'}}
+              placeholderIconColor="#007aff"
+              selectedValue={vendor}
+              onValueChange={val => setVendor(val)}>
+              <Picker.Item label="ALL" value="ALL" />
+              <Picker.Item label="Vendor 1" value="1" />
+              <Picker.Item label="Vendor 2" value="2" />
+            </Picker>
+          </Item>
+        </Form>
+        <ProductList list={[1, 2, 3, 4, 5]} />
+      </Content>
+
+      <Footer>
+        <Title>
+          <Text>adfasdf</Text>
+        </Title>
+      </Footer>
+    </Container>
   );
 };
 
-const styles = StyleSheet.create({
-  inputView: {
-    // width: deviceWidth - 20,
-    marginLeft: 10,
-    marginRight: 10,
-    marginTop: 20,
-    display: 'flex',
-    flexDirection: 'row',
-  },
-  location: {
-    borderColor: 'black',
-    borderWidth: 1,
-    borderRadius: 5,
-    height: 40,
-    color: 'white',
-    width: '90%',
-    paddingLeft: 10,
-    paddingRight: 10,
-    marginRight: 10,
-  },
-  vendorList: {
-    borderColor: 'black',
-    borderWidth: 1,
-    borderRadius: 5,
-    height: 40,
-    color: 'white',
-    width: '100%',
-    paddingLeft: 10,
-    paddingRight: 10,
-    marginRight: 10,
-  },
-  loginText: {
-    textAlign: 'center',
-    fontSize: 18,
-    color: 'white',
-    fontSize: 20,
-  },
-  checkout: {
-    backgroundColor: 'green',
-    width: '100%',
-    paddingTop: 10,
-    paddingBottom: 10,
-    marginTop: '20%',
-    // marginLeft: 10,
-    // marginRight:10
-  },
-});
 export default Product;

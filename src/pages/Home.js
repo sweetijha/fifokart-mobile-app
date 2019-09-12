@@ -38,7 +38,7 @@ const Home = props => {
       <View>
         <TouchableOpacity
           onPress={() => {
-            props.navigation.navigate('Product');
+            props.navigation.navigate('Main');
           }}>
           <Text style={styles.skip}>{'Skip'}</Text>
         </TouchableOpacity>

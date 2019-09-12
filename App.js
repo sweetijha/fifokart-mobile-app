@@ -3,6 +3,7 @@ import Route from './src/routes';
 import {StatusBar} from 'react-native';
 
 const App = () => {
+  console.disableYellowBox = true;
   return (
     <Fragment>
       <StatusBar barStyle="dark-content" />

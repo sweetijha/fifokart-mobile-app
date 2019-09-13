@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Image} from 'react-native';
 import {
   Container,
   Header,
@@ -62,12 +62,20 @@ const Product = props => {
             </Picker>
           </Item>
         </Form>
-        <ProductList list={[1, 2, 3, 4, 5]} />
+        <View style={{display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}>
+          <ProductList list={[1, 2, 3, 4, 5]} />
+        </View>
       </Content>
 
       <Footer>
-        <Title>
-          <Text>adfasdf</Text>
+        <Title
+          style={{
+            alignItems: 'center',
+            justifyContent: 'center',
+            position: 'relative',
+            top: 10,
+          }}>
+          <Text>Proceed To Checkout</Text>
         </Title>
       </Footer>
     </Container>

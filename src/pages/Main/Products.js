@@ -46,7 +46,7 @@ const Product = props => {
             style={{
               fontSize: 18,
               flex: 1,
-              marginTop: 10,
+              marginTop: 5,
             }}>
             Daily Special: Bisleri
           </Text>
@@ -73,7 +73,7 @@ const Product = props => {
             style={{
               fontSize: 18,
               flex: 1,
-              marginTop: 10,
+              marginTop: 5,
             }}>
             Daily Special: Bisleri
           </Text>
@@ -100,7 +100,7 @@ const Product = props => {
             style={{
               fontSize: 18,
               flex: 1,
-              marginTop: 10,
+              marginTop: 5,
             }}>
             Daily Special: Bisleri
           </Text>
@@ -127,7 +127,7 @@ const Product = props => {
             style={{
               fontSize: 18,
               flex: 1,
-              marginTop: 10,
+              marginTop: 5,
             }}>
             Daily Special: Bisleri
           </Text>

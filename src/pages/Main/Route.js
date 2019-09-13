@@ -9,7 +9,7 @@ export default createMaterialBottomTabNavigator(
     Orders: {screen: Orders},
   },
   {
-    initialRouteName: 'Products',
+    initialRouteName: 'Orders',
     activeTintColor: '#ff0000',
   },
 );

@@ -26,9 +26,6 @@ const IMG_URL = {uri: 'http://localhost:4000/public/assets/images/logo.png'};
 
 const ProductList = props => {
   const {list} = props;
-  const Image_Http_URL = {
-    uri: 'http://develop.fifokart.in/bisleri.png',
-  };
   return list.map(item => (
     <View
       style={{
@@ -44,7 +41,9 @@ const ProductList = props => {
         borderColor: '#fff',
       }}>
       <Image
-        source={require('../../assets/bisleri.png')}
+        source={{
+          uri: 'http://develop.fifokart.in/bisleri.png',
+        }}
         style={{height: 150, width: '50%', resizeMode: 'cover', marginTop: 20}}
       />
       <H3 style={{textAlign: 'center', width: '100%'}}>Product Name</H3>

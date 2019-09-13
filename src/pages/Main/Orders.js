@@ -13,6 +13,7 @@ import {
   Picker,
 } from 'react-native';
 import {Header, Card} from 'react-native-elements';
+import CustomHeader from '../../components/Common/CustomHeader';
 // import {
 //   Container,
 //   Header,
@@ -32,20 +33,12 @@ import {Header, Card} from 'react-native-elements';
 const Orders = props => {
   return (
     <View style={{flex: 1}}>
-      {/* <Header
-        leftComponent={{icon: 'menu', color: '#fff'}}
-        centerComponent={{
-          text: 'MY ORDER',
-          style: {color: '#fff', fontSize: 18},
-        }}
-        rightComponent={{icon: 'shopping-cart', color: '#fff'}}
-      />
+      <CustomHeader page="ORDER" heading="Today's Orders" />
       <View style={styles.selectList}>
         <Picker>
-          <Picker.Item label="Java" value="java" />
-          <Picker.Item label="JavaScript" value="js" />
-          <Picker.Item label="Java" value="java" />
-          <Picker.Item label="JavaScript" value="js" />
+          <Picker.Item label="All" value="All" />
+          <Picker.Item label="SCHEDULED" value="SCHEDULED" />
+          <Picker.Item label="NORMAL" value="NORMAL" />
         </Picker>
       </View>
       <View style={{flex: 1}}>
@@ -68,15 +61,15 @@ const Orders = props => {
             </View>
           </View>
         </Card>
-      </View> */}
-      <Header
+      </View>
+      {/* <Header
         leftComponent={{icon: 'menu', color: '#fff'}}
         centerComponent={{
           text: 'PROFILE',
           style: {color: '#fff', fontSize: 18},
         }}
         rightComponent={{icon: 'person icon', color: '#fff'}}
-      />
+      /> */}
     </View>
   );
 };
@@ -94,6 +87,7 @@ const styles = StyleSheet.create({
   },
   cardView: {
     borderRadius: 15,
+    borderColor: 'lightgray',
     // shadowColor: '#000',
     // shadowOffset: {width: 0, height: 2},
     // shadowOpacity: 0.5,
@@ -101,4 +95,5 @@ const styles = StyleSheet.create({
     // elevation: 2,
   },
 });
+
 export default Orders;

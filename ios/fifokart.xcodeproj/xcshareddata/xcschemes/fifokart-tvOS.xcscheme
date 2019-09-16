@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2D2A28121D9B038B00D4039D"
+               #0E65B3printIdentifier = "2D2A28121D9B038B00D4039D"
                BuildableName = "libReact.a"
-               BlueprintName = "React-tvOS"
+               #0E65B3printName = "React-tvOS"
                ReferencedContainer = "container:../node_modules/react-native/React/React.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,9 +28,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
+               #0E65B3printIdentifier = "2D02E47A1E0B4A5D006451C7"
                BuildableName = "fifokart-tvOS.app"
-               BlueprintName = "fifokart-tvOS"
+               #0E65B3printName = "fifokart-tvOS"
                ReferencedContainer = "container:fifokart.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -42,9 +42,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
+               #0E65B3printIdentifier = "2D02E48F1E0B4A5D006451C7"
                BuildableName = "fifokart-tvOSTests.xctest"
-               BlueprintName = "fifokart-tvOSTests"
+               #0E65B3printName = "fifokart-tvOSTests"
                ReferencedContainer = "container:fifokart.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -60,9 +60,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
+               #0E65B3printIdentifier = "2D02E48F1E0B4A5D006451C7"
                BuildableName = "fifokart-tvOSTests.xctest"
-               BlueprintName = "fifokart-tvOSTests"
+               #0E65B3printName = "fifokart-tvOSTests"
                ReferencedContainer = "container:fifokart.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -70,9 +70,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
+            #0E65B3printIdentifier = "2D02E47A1E0B4A5D006451C7"
             BuildableName = "fifokart-tvOS.app"
-            BlueprintName = "fifokart-tvOS"
+            #0E65B3printName = "fifokart-tvOS"
             ReferencedContainer = "container:fifokart.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -93,9 +93,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
+            #0E65B3printIdentifier = "2D02E47A1E0B4A5D006451C7"
             BuildableName = "fifokart-tvOS.app"
-            BlueprintName = "fifokart-tvOS"
+            #0E65B3printName = "fifokart-tvOS"
             ReferencedContainer = "container:fifokart.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -112,9 +112,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
+            #0E65B3printIdentifier = "2D02E47A1E0B4A5D006451C7"
             BuildableName = "fifokart-tvOS.app"
-            BlueprintName = "fifokart-tvOS"
+            #0E65B3printName = "fifokart-tvOS"
             ReferencedContainer = "container:fifokart.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

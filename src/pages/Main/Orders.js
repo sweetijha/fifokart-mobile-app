@@ -33,7 +33,7 @@ import CustomHeader from '../../components/Common/CustomHeader';
 const Orders = props => {
   return (
     <View style={{flex: 1}}>
-      <CustomHeader page="ORDER" heading="Today's Orders" />
+      <CustomHeader page="ORDER" heading="Today's Orders" cart={true} />
       <View style={styles.selectList}>
         <Picker>
           <Picker.Item label="All" value="All" />

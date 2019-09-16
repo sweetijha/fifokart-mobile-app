@@ -21,7 +21,7 @@ const Product = props => {
   const [vendor, setVendor] = useState('ALL');
   return (
     <Container>
-      <CustomHeader page="PRODUCT" />
+      <CustomHeader page="PRODUCT" cart={true} />
       <Content>
         <Form>
           <Item picker>

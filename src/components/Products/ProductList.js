@@ -68,13 +68,13 @@ const ProductList = props => {
         </Text>
         <Text
           style={{
-            color: 'blue',
+            color: '#0E65B3',
             width: '50%',
             textAlign: 'right',
             fontSize: 16,
             fontWeight: '600',
           }}>
-          <Icon name="currency-inr" color={'blue'} size={16} />
+          <Icon name="currency-inr" color={'#0E65B3'} size={16} />
           70
         </Text>
       </View>

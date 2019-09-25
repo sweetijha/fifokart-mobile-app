@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, TouchableOpacity, Alert} from 'react-native';
 import {
   Container,
   Header,
@@ -15,6 +15,7 @@ import {
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Cart from '../../assets/svgs/cart';
 import LocationDetect from '../Products/LocationDetect';
+import navController from '../../controllers/navController';
 
 const CustomHeader = props => {
   const {page, heading, cart, backButton} = props;
@@ -29,7 +30,12 @@ const CustomHeader = props => {
             position: 'relative',
             marginRight: 20,
           }}>
-          <Icon name="arrow-left" color={'#384850'} size={30} />
+          <Icon
+            name="arrow-left"
+            color={'#384850'}
+            size={30}
+            onPress={() => navController.goBack()}
+          />
         </View>
       ) : null}
       {page === 'PRODUCT' ? (
@@ -44,13 +50,14 @@ const CustomHeader = props => {
         </H3>
       )}
       {cart ? (
-        <View
+        <TouchableOpacity
           style={{
             alignItems: 'center',
             display: 'flex',
             justifyContent: 'center',
             position: 'relative',
-          }}>
+          }}
+          onPress={() => navController.navigate('Cart', {})}>
           <Badge
             primary
             style={{
@@ -63,7 +70,7 @@ const CustomHeader = props => {
             <Text style={{fontSize: 12, color: 'white'}}>2</Text>
           </Badge>
           <Icon name="cart-outline" color={'#384850'} size={30} />
-        </View>
+        </TouchableOpacity>
       ) : null}
     </Header>
   );

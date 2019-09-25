@@ -1,16 +1,7 @@
 import React, {Fragment} from 'react';
-import {
-  StyleSheet,
-  View,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  StatusBar,
-  ImageBackground,
-  Image,
-  Dimensions,
-} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
 import styles from '../styles/Home';
+import navController from '../controllers/navController';
 const Home = props => {
   return (
     <View
@@ -22,7 +13,7 @@ const Home = props => {
       <TouchableOpacity
         style={styles.submitButton}
         onPress={() => {
-          props.navigation.navigate('Signup');
+          navController.navigate('Signup');
         }}>
         <Text style={styles.loginText}>Signup</Text>
       </TouchableOpacity>
@@ -30,7 +21,7 @@ const Home = props => {
         <TouchableOpacity
           style={styles.submitButton}
           onPress={() => {
-            props.navigation.navigate('Login');
+            navController.navigate('Login');
           }}>
           <Text style={styles.loginText}>Login</Text>
         </TouchableOpacity>
@@ -38,7 +29,7 @@ const Home = props => {
       <View>
         <TouchableOpacity
           onPress={() => {
-            props.navigation.navigate('Main');
+            navController.navigate('Main');
           }}>
           <Text style={styles.skip}>{'Skip'}</Text>
         </TouchableOpacity>

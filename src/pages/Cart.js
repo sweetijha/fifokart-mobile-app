@@ -12,8 +12,10 @@ import CustomHeader from '../components/Common/CustomHeader';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {H3, Card} from 'native-base';
 import {CheckBox} from 'react-native-elements';
+import navController from '../controllers/navController';
 const Cart = props => {
   const [isScheduled, setIsScheduled] = useState(false);
+  const [addressId, setAddressId] = useState('');
   const [cartDetails, setCartDetails] = useState([
     {
       product_id: 1,
@@ -49,11 +51,51 @@ const Cart = props => {
     <View style={{position: 'relative', height: '100%'}}>
       <CustomHeader page="CART" heading="My Cart" backButton={true} />
       <View>
-        <CheckBox
+        {/* <CheckBox
           title="Click here for shceduled your order"
           checked={isScheduled}
           onPress={() => setIsScheduled(!isScheduled)}
-        />
+        /> */}
+        <View style={{display: 'flex', padding: 5}}>
+          <Card style={{padding: 10}}>
+            <View
+              style={{
+                display: 'flex',
+                flexDirection: 'row',
+                borderBottomWidth: 1,
+                borderBottomColor: 'gray',
+                paddingBottom: 10,
+              }}>
+              <Text style={{flex: 1}}>Price Details</Text>
+            </View>
+            <View
+              style={{display: 'flex', flexDirection: 'row', marginTop: 10}}>
+              <Text style={{flex: 1}}>Price ({cartDetails.length} Items)</Text>
+              <Text style={{fontSize: 14}}>
+                <Icon name="currency-inr" size={16} /> {getTotalPrice()}
+              </Text>
+            </View>
+            <View
+              style={{display: 'flex', flexDirection: 'row', marginBottom: 10}}>
+              <Text style={{flex: 1}}>Delivery</Text>
+              <Text style={{fontSize: 14}}>Free</Text>
+            </View>
+            <View
+              style={{
+                display: 'flex',
+                flexDirection: 'row',
+                borderTopWidth: 1,
+                borderTopColor: 'gray',
+                paddingTop: 10,
+              }}>
+              <Text style={{flex: 1}}>Total Price</Text>
+              <Text style={{fontSize: 14}}>
+                <Icon name="currency-inr" size={16} />
+                {getTotalPrice()}
+              </Text>
+            </View>
+          </Card>
+        </View>
         {cartDetails.map((item, index) => (
           <View style={{display: 'flex', padding: 5}}>
             <Card style={{padding: 10}}>
@@ -225,7 +267,7 @@ const Cart = props => {
         <TouchableOpacity style={{paddingLeft: 30, paddingRight: 10}}>
           <Button
             title="Place Order"
-            onPress={() => Alert.alert('Simple Button pressed')}
+            onPress={() => navController.navigate("Address")}
           />
         </TouchableOpacity>
       </View>

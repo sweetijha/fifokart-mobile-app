@@ -6,23 +6,10 @@
  * @flow
  */
 
-import React, {Fragment} from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  Text,
-  StatusBar,
-  InputGroup,
-  Input,
-  Card,
-  CardItem,
-  H3,
-  Button,
-} from 'native-base';
+import React from 'react';
+import {Text, H3, Button} from 'native-base';
 import {Image, View} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-const IMG_URL = {uri: 'http://localhost:4000/public/assets/images/logo.png'};
 
 const ProductList = props => {
   const {list} = props;

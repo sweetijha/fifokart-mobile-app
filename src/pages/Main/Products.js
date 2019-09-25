@@ -1,12 +1,10 @@
-import React, {useState} from 'react';
-import {View, Text, Image} from 'react-native';
+import React, {useState, useReducer, useCallback} from 'react';
+import {View, Text, Image, Alert} from 'react-native';
 import {
   Container,
-  Header,
   Content,
   Footer,
   Title,
-  Badge,
   Form,
   Picker,
   Item,
@@ -16,9 +14,13 @@ import Cart from '../../assets/svgs/cart';
 import LocationDetect from '../../components/Products/LocationDetect';
 import ProductList from '../../components/Products/ProductList';
 import CustomHeader from '../../components/Common/CustomHeader';
+import {reducer, initialState} from '../../service/reducer/user';
+import {GET_LOGIN} from '../../service/constant';
 
 const Product = props => {
   const [vendor, setVendor] = useState('ALL');
+  const [state, dispatch] = useReducer(reducer, initialState);
+  Alert.alert(JSON.stringify(state));
   return (
     <Container>
       <CustomHeader page="PRODUCT" cart={true} />
